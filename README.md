@@ -6,6 +6,11 @@ The idea of this is to cover a whole bunch of basic syntaxes for several languag
 
 Maybe instead of just an example script thing that doesnt really have a purpose, we give this script a job and a purpose, and each language has to do the same job/purpose. Could be interesting
 
+# todo
+- add more languages
+- add more stuff to the script
+- add a thing to test that theyre all the same
+
 # Stuff to Cover
 - func to print log info (use ] syntax)
   - maybe do a thing so you can pass in regular args
