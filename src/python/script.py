@@ -2,7 +2,7 @@ import os
 import json
 import datetime
 
-def PrintInfo(msg):
+def printInfo(msg):
 	print(f"] {msg}")
 
 # get the directory of this script
@@ -22,7 +22,7 @@ files = [f for f in files if os.path.isfile(os.path.join(dataDir, f))]
 files = list(filter(lambda f: f.endswith(".json"), files))
 
 # list all json files in the directory by full path name, then filename, then ext
-PrintInfo("JSON files:")
+printInfo("JSON files:")
 for file in files:
 	fullPath = os.path.join(dataDir, file)
 	if not os.path.exists(fullPath):
@@ -46,14 +46,13 @@ data = json.loads(text)
 
 petNames = list(map(lambda p: p["name"], data["pets"]))
 
-PrintInfo("Pet Names:")
-for name in petNames:
-	print(name)
+printInfo("Pet Names:")
+print(", ".join(petNames))
 
 # sort by age
 pets = sorted(data["pets"], key=lambda p: datetime.datetime.strptime(p["born"], "%b %Y"), reverse=True)
 
-PrintInfo("Pet Information")
+printInfo("Pet Information")
 for i in range(len(pets)):
 	pet = pets[i]
 

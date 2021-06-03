@@ -48,7 +48,7 @@ $data = $text | ConvertFrom-Json
 $petNames = $data.pets | % { $_.name }
 
 PrintInfo "Pet Names:"
-$petNames
+$petNames -join ", "
 
 # sort by age
 $pets = $data.pets | Sort-Object { [datetime]::ParseExact($_.born, "MMM yyyy", $null) } -Descending
