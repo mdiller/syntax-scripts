@@ -1,0 +1,29 @@
+{
+	"key": "value",
+	"pets": [
+		{
+			"name": "comet",
+			"type": "dog",
+			"born": "Aug 2019",
+			"good": true
+		},
+		{
+			"name": "fizzgig",
+			"type": "dog",
+			"born": "Oct 2014",
+			"good": true
+		},
+		{
+			"name": "minerva",
+			"type": "cat",
+			"born": "Nov 2018",
+			"good": true
+		},
+		{
+			"name": "oscar",
+			"type": "cat",
+			"born": "Jun 2008",
+			"good": true
+		}
+	]
+}
