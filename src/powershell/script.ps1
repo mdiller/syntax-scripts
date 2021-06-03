@@ -3,14 +3,14 @@ function PrintInfo([string] $msg)  {
 	[Console]::ForegroundColor = 'yellow'
 	[Console]::Write("] ")
 	[Console]::ResetColor()
-	[Console]::Error.WriteLine($msg)
+	[Console]::WriteLine($msg)
 }
 
 # get the directory of this script
 $scriptDir = $PSScriptRoot
 
 # go to the root directory of this folder
-$rootDir = Split-Path -Parent (Split-Path -Parent $PSScriptRoot)
+$rootDir = Split-Path -Parent (Split-Path -Parent $scriptDir)
 
 # get the data directory
 $dataDir = Join-Path -Path $rootDir "data"
@@ -43,15 +43,15 @@ $filename = $files[0].FullName
 
 $text = Get-Content -Path $filename
 
-$json = $text | ConvertFrom-Json
+$data = $text | ConvertFrom-Json
 
-$petNames = $json.pets | % { $_.name }
+$petNames = $data.pets | % { $_.name }
 
 PrintInfo "Pet Names:"
 $petNames
 
 # sort by age
-$pets = $json.pets | Sort-Object { [datetime]::ParseExact($_.born, "MMM yyyy", $null) } -Descending
+$pets = $data.pets | Sort-Object { [datetime]::ParseExact($_.born, "MMM yyyy", $null) } -Descending
 
 PrintInfo "Pet Information"
 for ($i = 0; $i -lt $pets.Length; $i++) {
