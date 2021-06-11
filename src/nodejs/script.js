@@ -63,7 +63,7 @@ for (var i = 0; i < pets.length; i++) {
 	var age = (now - birthday) / (1000 * 3600 * 24) / 365;
 	age = age.toFixed(2);
 
-	info = `${pet.name} [${pet.type}] is ${age} years old`;
+	var info = `${pet.name} [${pet.type}] is ${age} years old`;
 	console.log(info);
 }
 

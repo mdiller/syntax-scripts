@@ -8,7 +8,7 @@ The idea of this is to cover a whole bunch of basic syntaxes for several languag
 - [x] python
 - [x] nodejs
 - [x] bash
-- [ ] C#?
+- [x] C#
 - [ ] c/c++?
 - [ ] go?
 - [ ] rust?

@@ -2,7 +2,7 @@
 	"key": "value",
 	"pets": [
 		{
-			"name": "zcomet",
+			"name": "comet",
 			"type": "dog",
 			"born": "Aug 2019",
 			"good": true
