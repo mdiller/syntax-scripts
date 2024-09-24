@@ -3,6 +3,26 @@
 The idea of this is to cover a whole bunch of basic syntaxes for several languages so that its all in one place and easy to look up if i want to know how to do a regex replace for each item in a list in any language for example. Also could be nice for people to look at potentially when learning new languages, and will likely help me learn new languages as I could just make it a task to add a new language to this list! This will probably mainly focus on "scripting" languages that dont require a lot of extra files/projects to be around in order to run them, but we'll see where it goes.
 
 
+
+```py
+def CountFilesInDirectory(dir, filename, level=0):
+  count = 0
+  
+  print((level * "-") + dir)
+
+  for file in getFilesInDir(dir):
+    if file == filename:
+      count += 1
+    if someWeirdThing():
+      print((level * "-") + "Weird thing happened")
+
+  for child_dir in getDirsInDir(dir):
+    count += CountFilesInDirectory(child_dir, filename, level + 1)
+
+  return count
+```
+
+
 # Languages Implemented
 - [x] powershell
 - [x] python
